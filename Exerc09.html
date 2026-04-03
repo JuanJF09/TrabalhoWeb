@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100dvh;
+      min-height: 100vh;
       margin: 0;
     }
 
@@ -20,7 +21,7 @@
       background: #fff;
       padding: 20px;
       border-radius: 10px;
-      width: 320px;
+      width: 350px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
@@ -59,8 +60,8 @@
 
     li {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       margin: 8px 0;
       padding: 5px;
       border-bottom: 1px solid #ddd;
@@ -72,15 +73,15 @@
       gap: 8px;
     }
 
-    /* ✅ AQUI está o uso do text-decoration */
+    /* 🔥 uso do text-decoration */
     input[type="checkbox"]:checked + span {
       text-decoration: line-through;
       color: gray;
     }
 
     .actions button {
-      margin-left: 5px;
       background: #6c757d;
+      margin-left: 5px;
     }
 
     .actions button:hover {
@@ -95,7 +96,8 @@
     <h2>Lista de Tarefas</h2>
 
     <div class="input-area">
-      <input type="text" id="taskInput" placeholder="Nova tarefa">
+      <!-- ✅ uso da tag input -->
+      <input type="text" id="taskInput" placeholder="Digite uma tarefa">
       <button onclick="addTask()">Adicionar</button>
     </div>
 
