@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "pt br">
+<head>
+    <meta charset="UTF-8">
+    <title>BackgroundImage</title>
+
+     <style>
+
+        header h1{
+             text-align: center;
+             color: #fa834c; 
+            text-shadow:  1px 1px 0 #ffffff,-1px -1px 0 #ffffff,1px -1px 0#ffffff,-1px 1px 0 #ffffff;}
+
+
+        header h2{
+             text-align: center;
+             color: #ff8953; 
+            text-shadow:  1px 1px 0 #ffffff,-1px -1px 0 #ffffff,1px -1px 0 #ffffff,-1px 1px 0 #ffffff;}
+
+        
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('https://images4.alphacoders.com/114/1149721.png'); 
+            background-size: cover;
+            background-position: center;    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+        .fundo-central {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-image: url('https://images4.alphacoders.com/114/1149721.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #faa200;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .overlay {
+        position: absolute;
+        top: 5;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0,5)
+    }
+
+    .conteudo {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        padding: 20px;   
+    }
+    </style>
+</head>
+
+<body>
+    <div class="fundo-central">
+    <div class=" overlay"></div>
+    <header class = "conteudo">
+    <h1>Raze</h1>
+    <h2>
+        A Raze, do Valorant, é uma agente explosiva e cheia de energia, conhecida por seu estilo agressivo.
+Ela usa granadas, robôs e explosivos para causar dano em área e pressionar os inimigos.
+Com uma personalidade animada e caótica, Raze luta sempre com atitude e diversão.
+    </h2>
+  </header>
+</div>
+</body>
+</html>

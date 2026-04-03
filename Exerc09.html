@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #007BFF, #00c6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100dvh;
+      margin: 0;
+    }
+
+    .todo-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 8px;
+    }
+
+    button {
+      padding: 8px;
+      cursor: pointer;
+      border: none;
+      background: #007BFF;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ✅ AQUI está o uso do text-decoration */
+    input[type="checkbox"]:checked + span {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .actions button {
+      margin-left: 5px;
+      background: #6c757d;
+    }
+
+    .actions button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="todo-container">
+    <h2>Lista de Tarefas</h2>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Nova tarefa">
+      <button onclick="addTask()">Adicionar</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const text = input.value.trim();
+
+      if (text === "") return;
+
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <div class="task">
+          <input type="checkbox">
+          <span>${text}</span>
+        </div>
+        <div class="actions">
+          <button onclick="editTask(this)">Editar</button>
+          <button onclick="deleteTask(this)">Excluir</button>
+        </div>
+      `;
+
+      document.getElementById("taskList").appendChild(li);
+      input.value = "";
+    }
+
+    function deleteTask(button) {
+      button.closest("li").remove();
+    }
+
+    function editTask(button) {
+      const span = button.closest("li").querySelector("span");
+      const newText = prompt("Editar tarefa:", span.textContent);
+
+      if (newText !== null && newText.trim() !== "") {
+        span.textContent = newText;
+      }
+    }
+  </script>
+
+</body>
+</html>
