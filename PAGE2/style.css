@@ -1,0 +1,80 @@
+body {
+    background-color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.cartao-perfil {
+    background: white;
+    display: flex;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.coluna-foto {
+    flex: 1;
+    text-align: center;
+}
+
+.etiqueta-topo {
+    font-size: 0.8rem;
+    color: #222;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.nome-destaque {
+    font-size: 2.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: 700;
+}
+
+.foto-usuario {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    border: solid #222;
+}
+
+.coluna-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-left: 10%;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.grupo-botoes {
+    margin-top: 20px;
+}
+
+.botao-link {
+    text-decoration: none;
+    background-color: #222;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.botao-link:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
