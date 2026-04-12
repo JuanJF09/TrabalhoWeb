@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #007BFF, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 15=PX;
+}
+
+.todo-container {
+  background: #fff;
+
+  padding: 60px 25px;
+  border-radius: 10px;
+  width: clamp(320px, 85vw, 700px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+}
+
+.input-area {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px; 
+  font-size: 16px; 
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px 0;
+  padding: 8px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.actions button {
+  background: #6c757d;
+  margin-left: 5px;
+}
+
+.actions button:hover {
+  background: #444;
+}

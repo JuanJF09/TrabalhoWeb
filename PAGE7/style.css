@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #007BFF, #00c6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100dvh;
+  margin: 0;
+  padding: 15px; /* ADICIONADO */
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  background: #fff;
+  padding: 90px 25px;
+  border-radius: 10px;
+
+  width: clamp(260px, 90vw, 600px);
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  outline: none;
+
+  display: block;
+  font-size: 16px; /* ADICIONADO (evita zoom no celular) */
+}
+
+input:focus {
+  border-color: #0056b3;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* 🔧 pequeno ajuste para celular */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+  }
+}

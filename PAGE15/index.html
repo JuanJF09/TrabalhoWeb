@@ -4,50 +4,7 @@
   <meta charset="UTF-8">
   <title>Lançamento de Produto</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: linear-gradient(135deg, #007BFF, #00c6ff);
-      margin: 0;
-    }
-
-    .container {
-      background: white;
-      padding: 20px;
-      margin: 50px auto;
-      width: 300px;
-      border-radius: 10px;
-    }
-
-    .product-img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .countdown {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0;
-      padding: 10px;
-      background: #007BFF;
-      color: white;
-      border-radius: 5px;
-      animation: pulse 1s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    input, button {
-      width: 100%;
-      margin: 5px 0;
-      padding: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -55,14 +12,14 @@
   <div class="container">
     <h1>Lançamento Poco X8</h1>
 
-    <!-- Imagem -->
+  
     <img src="https://tm.ibxk.com.br/2026/02/19/poco_x8_pro_vazado_b4281c1a65.jpg" class="product-img">
 
-    <!-- Contagem com <time> -->
+  
     <p>Faltam:</p>
     <time id="countdown" class="countdown" datetime="2026-04-15T00:00:00"></time>
 
-    <!-- Recursos -->
+   
     <h3>Recursos</h3>
     <ul>
       <li>Alta performance</li>
@@ -70,8 +27,7 @@
       <li>Bateria durável</li>
     </ul>
 
-    <!-- Formulário -->
-    <h3>Pré-venda</h3>
+     <h3>Pré-venda</h3>
     <form>
       <input type="text" placeholder="Nome" required>
       <input type="email" placeholder="Email" required>
