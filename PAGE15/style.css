@@ -21,20 +21,20 @@ body {
 }
 
 .countdown {
-  font-size: 20px;
+  display: inline-block;
+  font-size: 22px;
   font-weight: bold;
-  margin: 15px 0;
   padding: 10px;
   background: #007BFF;
   color: white;
   border-radius: 5px;
 
-  animation: move 2s ease-in-out infinite;
+  animation: combo 1s ease-in-out infinite;
 }
 
-@keyframes move {
+@keyframes combo {
   0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-6px) scale(1.05); }
+  50% { transform: translateY(-15px) scale(1.08); }
   100% { transform: translateY(0) scale(1); }
 }
 
